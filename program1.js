@@ -12,7 +12,6 @@ var isValid = function(s) {
     
     for (let char of s) {
         if (char in mapping) {
-            // Check for matching opening bracket
             const topElement = stack.length === 0 ? '#' : stack.pop();
             if (topElement !== mapping[char]) {
                 return false;
